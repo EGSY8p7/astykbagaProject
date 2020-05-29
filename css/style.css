@@ -68,9 +68,6 @@ input,select{vertical-align:middle}
      margin: 0 auto;
 }
 
-  .header{
-     
-  }
   /*div with logo + loading*/
   .header_wrapper{
        display: flex;

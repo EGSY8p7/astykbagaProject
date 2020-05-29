@@ -5,22 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astykbaga</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="wrapper">
-            <div class="header_wrapper">
-                <div class="header_logo">
-                    <img src="/img/logo-for-loadpage.png" alt="Astykbaga" class="header_logo-pic">
-                </div>
-                <div class="header_load_percentage">
-                    <p>24%</p>
-                </div>
-            </div>
+    <!--страницы загрузки-->
+    
+    <div class="preloader">
+        <div class="preloader-logo">
+           <img src="./img/logo-for-loadpage.png" alt="Astykbaga" class="preloader_logo">
         </div>
-        <div class="header_loading">
-            <p>loading</p>
+        <div class="preloader__status">
+           <div status class="preloader__status-text"> {{loaded}} % </div>        
         </div>
-    </header>
+        <div class="preloader__status-loader">
+            <div loader :style="loadStyle" class="preloader__status-bar"></div>
+         </div>
+     </div>
+     <!--конец загрузки-->
+     
+     <!--следующая страница-->
+     <main class="main">
+         <section class="sign__in">
+             <div class="sign__in__columns">
+                <div class="sign__in__columns-left">
+                     <p>left</p>
+                </div> 
+                <div class="sign__in__columns-right">
+                    <p>right</p>
+                </div>    
+             </div>                               
+         </section>
+     </main>
+     
+     <!--конец страницы-->
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+     <script src="js/preloader.js"></script>
 </body>
+
 </html>
