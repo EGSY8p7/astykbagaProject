@@ -56,7 +56,7 @@ input,select{vertical-align:middle}
   body{
        font-family: 'Lato';
        font-style: normal;
-       font-size: 16;
+       /*font-size: 16;*/
        line-height: 1.2;
        font-weight: normal;
        color: #000000;;
@@ -64,8 +64,9 @@ input,select{vertical-align:middle}
   }
 
   .wrapper{
-     max-width: 1080px; /*max width for blocks to follow*/
+     max-width: 900px; /*max width for blocks to follow*/
      margin: 0 auto;
+     padding-top: 100px;
 }
 
   /*div with logo + loading*/
@@ -95,3 +96,84 @@ input,select{vertical-align:middle}
      padding: 10px; /* Поля вокруг текста */
      background: #149B5F; /* bkgcolor временный*/
   }
+
+  .intro{
+     height: 100vh;
+     background: url(../img/bg_image_corns.png) no-repeat right;
+     background-color: #F7F7F7;
+     background-size: contain; 
+     /*padding-top: 124px;*/
+  }
+/*start of login page style*/
+  .intro__title{
+     font-style: bold;
+     font-weight: 900;
+     font-size: 25px;
+     line-height: 42px;
+     color: #141414;
+     margin-bottom: 22px;
+  }
+  .intro__image{
+       display: block;
+       margin-left: -58px;
+       width: 412.45px;
+       height: 98.29px;
+       margin-bottom: 20px;
+  }
+  .intro__subtitle{
+     font-size: 14px;
+     line-height: 20px;
+     max-width: 445px;
+     margin-bottom: 10px;     
+  }
+  .intro__subtitle2{
+     font-size: 14px;
+     line-height: 20px;
+     max-width: 445px;
+     margin-bottom: 25px;
+  }
+  .intro__subtitle3{
+     font-weight: 900;
+     font-size: 12px;
+     line-height: 15px;
+     text-align: center;
+     letter-spacing: 0.2px;
+     color: #149B5F;
+  }
+/*end of left side of login page style*/
+.authosization{
+     display: flex;
+     flex-direction: row;
+     margin: 0 auto; 
+}
+.authosization__left{
+}
+.authorization__right{   
+     margin-top: 50px;
+     margin-left: 100px;
+}
+.auth__form-text{
+     font-size: 20px;
+     line-height: 24px;
+}
+.authosization__form{
+     
+}
+.auth_right-tabs{
+     width: auto;
+     height: 55px;
+     display: flex;
+     flex-direction: row;
+}
+.auth_right-tabs-content{
+     background-color: #F7F7F7;
+     width: 385px;
+     height: 320px;
+     padding: 40px 30px 80px 80px;
+     border: none;
+     cursor: pointer;
+}
+.auth_right-tabs-links{
+     height: 100%;
+     width: 50%;
+}

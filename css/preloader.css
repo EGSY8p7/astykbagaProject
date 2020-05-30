@@ -41,8 +41,8 @@
    height: 100vh;
    background: url(../img/bg_image_corns.png) no-repeat right;
    background-size: contain;
-   width: 100%;
-   top: 0;    right: 0;    bottom: 0;    left: 0;  
+   /*width: 100%;
+   top: 0;    right: 0;    bottom: 0;    left: 0; */ 
    
 }
 .sign__in__columns{
