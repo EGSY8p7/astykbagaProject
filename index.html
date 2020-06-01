@@ -43,31 +43,60 @@
                         <a href="" class="intro__subtitle3">Узнать о Союзе</a>
                     </div>
                     <div class="authorization__right">
-                        <div class="auth_right-tabs">
-                            <button class="auth_right-tabs-links" onclick="">Войти в личный кабинет</button>
-                            <button class="auth_right-tabs-links" onclick="">Регистрация</button>                           
-                        </div>
-                        <div class="auth_right-tabs-content">
-                            <form action="" class="authorization__form" method="">
-                                <p class="auth__form-text">Авторизация</p>
-                                <label for="emailType">E-mail</label>
-                                <div class="auth__form-group">                                
-                                    <input type="email" class="" id="emailType">
+                        <!--<div class="auth_right-tabs-content">-->
+                        <div id="tabs" class="container">
+                            <div class="tabs">
+                                <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">Войти в личный кабинет</a>
+                                <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">Регистрация</a>
+                            </div>
+                            <div class="content">
+                                <div v-if="activetab === 1" class="tabcontent">
+                                    <form action="" class="authorization__form" method="">
+                                        <p>Авторизация</p>
+                                        <label for="telType">Номер телефона</label>
+                                        <div class="auth__form-group">                  
+                                            <input type="tel" class="" id="telType">
+                                        </div>
+                                        <label for="passwordType">Пароль</label>
+                                        <div class="auth__form-group">
+                                            <input type="password" class="" id="passwordType">
+                                        </div>
+                                        <div class="auth__form-group">
+                                            <input type="submit" class="" value="Войти">
+                                            <a href="" class="auth__form-passforgot">Забыли пароль?</a>
+                                        </div>  
+                                        <p class="tab_text">Дальнейший просмотр информации возможен только для зарегистрированных пользователей</p>                      
+                                    </form>
                                 </div>
-                                <label for="telType">Номер телефона</label>
-                                <div class="auth__form-group">                                
-                                    <input type="tel" class="" id="telType">
+                                <div v-if="activetab === 2" class="tabcontent">
+                                    <form action="" class="authorization__form" method="">
+                                        <p>Регистрация</p>
+                                        <label for="emailType">E-mail</label>
+                                        <div class="auth__form-group">                  
+                                            <input type="email" class="" id="emailType">
+                                        </div>
+                                        <label for="telType">Номер телефона</label>
+                                        <div class="auth__form-group">                  
+                                            <input type="tel" class="" id="telType">
+                                        </div>
+                                        <label for="passwordType">Пароль</label>
+                                        <div class="auth__form-group">
+                                            <input type="password" class="" id="passwordType">
+                                        </div>
+                                        <label for="passwordTypeRepeat">Повторите пароль</label>
+                                        <div class="auth__form-group">
+                                            <input type="password" class="" id="passwordTypeRepeat">
+                                        </div>
+                                        <div class="auth__form-group">
+                                            <input type="submit" class="" value="Зарегистрироваться">
+                                        </div>
+                                        <p>Есть аккаунт?
+                                            <a href="" class="auth__form-have-account">Войдите</a>           
+                                        </p>
+                                    </form>
                                 </div>
-                                <label for="passwordType">Пароль</label>
-                                <div class="auth__form-group">
-                                    <input type="password" class="" id="passwordType">
-                                </div>
-                                <div class="auth__form-group">
-                                    <input type="submit" class="" value="Войти">
-                                    <a href="" class="auth__form-passforgot">Забыли пароль?</a>
-                                </div>                        
-                            </form>
-                        </div>
+                            </div>      
+                        </div> 
                     </div>
                 </div>
             </div>                          
@@ -80,6 +109,12 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
      <script src="js/preloader.js"></script>
+     <script>
+        new Vue({
+            el: '#tabs',
+            data: { activetab: 1 },
+            });
+     </script>
 </body>
 
 </html>
