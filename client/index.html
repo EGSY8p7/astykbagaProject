@@ -1,3 +1,4 @@
+<<<<<<< HEAD:client/index.html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -46,4 +47,125 @@
      <script src="js/preloader.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astykbaga</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <!--страницы загрузки-->
+    
+    <div class="preloader">
+        <div class="preloader-logo">
+           <img src="./img/logo-for-loadpage.png" alt="Astykbaga" class="preloader_logo">
+        </div>
+        <div class="preloader__status">
+           <div status class="preloader__status-text"> {{loaded}} % </div>        
+        </div>
+        <div class="preloader__status-loader">
+            <div loader :style="loadStyle" class="preloader__status-bar"></div>
+         </div>
+     </div>
+     <!--конец загрузки-->
+     
+     <!--следующая страница-->
+     <main class="main">
+         <section class="intro">
+            <div class="wrapper">
+                <div class="authosization">
+                    <div class="authorization__left">
+                        <img src="./img/svg/logo_sign-in.svg" alt="Astykbaga logo" class="intro__image">
+                        <h1 class="intro__title">
+                            Добро пожаловать!
+                        </h1>
+                        <p class="intro__subtitle">
+                            Вас приветствует AstyqBaga – единственный в Казахстане ресурс, где можно продать выращенное зерно, масличные, бобовые, а также продукцию их переработки. Где можно купить весь спектр этих товаров у прямых поставщиков по объективным ценам. 
+                        </p>
+                        <p class="intro__subtitle2">
+                            Это торговая площадка с постоянной модерацией в рабочие часы, и индексом цен реально заключенных контрактов. Это еще один удар по случайным на рынке компаниям, не имеющим активов, обязательств, а зачастую и совести. Это будет возможность предложить свой товар напрямую переработчикам и трейдерам, а, возможно, и самим импортерам. Участники Союза полеводов Казахстана используют все возможности AstyqBaga бесплатно.
+                        </p>
+                        <a href="" class="intro__subtitle3">Узнать о Союзе</a>
+                    </div>
+                    <div class="authorization__right">
+                        <!--<div class="auth_right-tabs-content">-->
+                        <div id="tabs" class="container">
+                            <div class="tabs">
+                                <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">Войти в личный кабинет</a>
+                                <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">Регистрация</a>
+                            </div>
+                            <div class="content">
+                                <div v-if="activetab === 1" class="tabcontent">
+                                    <form action="" class="authorization__form" method="">
+                                        <p>Авторизация</p>
+                                        <label for="telType">Номер телефона</label>
+                                        <div class="auth__form-group">                  
+                                            <input type="tel" class="" id="telType">
+                                        </div>
+                                        <label for="passwordType">Пароль</label>
+                                        <div class="auth__form-group">
+                                            <input type="password" class="" id="passwordType">
+                                        </div>
+                                        <div class="auth__form-group">
+                                            <input type="submit" class="" value="Войти">
+                                            <a href="" class="auth__form-passforgot">Забыли пароль?</a>
+                                        </div>  
+                                        <p class="tab_text">Дальнейший просмотр информации возможен только для зарегистрированных пользователей</p>                      
+                                    </form>
+                                </div>
+                                <div v-if="activetab === 2" class="tabcontent">
+                                    <form action="" class="authorization__form" method="">
+                                        <p>Регистрация</p>
+                                        <label for="emailType">E-mail</label>
+                                        <div class="auth__form-group">                  
+                                            <input type="email" class="" id="emailType">
+                                        </div>
+                                        <label for="telType">Номер телефона</label>
+                                        <div class="auth__form-group">                  
+                                            <input type="tel" class="" id="telType">
+                                        </div>
+                                        <label for="passwordType">Пароль</label>
+                                        <div class="auth__form-group">
+                                            <input type="password" class="" id="passwordType">
+                                        </div>
+                                        <label for="passwordTypeRepeat">Повторите пароль</label>
+                                        <div class="auth__form-group">
+                                            <input type="password" class="" id="passwordTypeRepeat">
+                                        </div>
+                                        <div class="auth__form-group">
+                                            <input type="submit" class="" value="Зарегистрироваться">
+                                        </div>
+                                        <p>Есть аккаунт?
+                                            <a href="" class="auth__form-have-account">Войдите</a>           
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>      
+                        </div> 
+                    </div>
+                </div>
+            </div>                          
+         </section>
+     </main>
+     
+     <!--конец страницы-->
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+     <script src="js/preloader.js"></script>
+     <script>
+        new Vue({
+            el: '#tabs',
+            data: { activetab: 1 },
+            });
+     </script>
+</body>
+
+>>>>>>> origin/login-page-draft:index.html
 </html>

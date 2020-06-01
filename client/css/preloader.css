@@ -1,3 +1,4 @@
+<<<<<<< HEAD:client/css/preloader.css
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
 .preloader{
@@ -72,4 +73,80 @@
     margin: 0 auto;
 
 }
+=======
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+.preloader{
+   width:100%;
+   height:100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 0 auto 50px; /* Выравнивание по центру */
+   align-items:center;
+   position: relative;
+}
+/*1 div*/
+.preloader-logo{
+    margin: 10px;
+    text-align: center;
+ }
+ /*2 div*/
+.preloader__status{
+      width: 100%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+   .preloader__status-text{
+      font-size: 30px;
+      margin-bottom:20px;
+   }
+   /*3 div*/
+   .preloader__status-loader{
+      width: 100%;
+      height: 4px;
+   }
+   .preloader__status-bar{
+      background: #149B5F;
+      height: 100%;
+   }
+/*sign in page start*/
+.sign__in{
+   height: 100vh;
+   background: url(../img/bg_image_corns.png) no-repeat right;
+   background-size: contain;
+   /*width: 100%;
+   top: 0;    right: 0;    bottom: 0;    left: 0; */ 
+   
+}
+.sign__in__columns{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    /*centering the block*/
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.sign__in__columns-left{
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.sign__in__columns-right{
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+
+}
+>>>>>>> origin/login-page-draft:css/preloader.css
 /*sign in page end*/

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:client/css/style.css
 /*reset css*/
 /*
 *  html5resetcss
@@ -95,3 +96,257 @@ input,select{vertical-align:middle}
      padding: 10px; /* Поля вокруг текста */
      background: #149B5F; /* bkgcolor временный*/
   }
+=======
+/*reset css*/
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+/*the style of mainpage*/
+/* lato-regular - latin-ext_latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'),
+         url('../fonts/lato-v16-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin-ext_latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'),
+         url('../fonts/lato-v16-latin-ext_latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-ext_latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-900 - latin-ext_latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'),
+         url('../fonts/lato-v16-latin-ext_latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-ext_latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /*paddings within elements*/
+  html{
+       box-sizing: border-box;
+  }
+  *, *::before, *::after{
+       box-sizing: inherit;
+  }
+
+  body{
+       font-family: 'Lato';
+       font-style: normal;
+       /*font-size: 16;*/
+       line-height: 1.2;
+       font-weight: normal;
+       color: #000000;;
+       background: #E5E5E5;
+       overflow: hidden;
+  }
+
+  .wrapper{
+     max-width: 900px; /*max width for blocks to follow*/
+     margin: 0 auto;
+     padding-top: 70px;
+}
+
+  /*div with logo + loading*/
+  .header_wrapper{
+       display: flex;
+       flex-direction: column;
+       padding-top: 200px;
+       margin: 0 auto 50px; /* Выравнивание по центру */
+  }
+  /*div with logo img*/
+  .header_logo{
+     margin: 10px;
+     text-align: center;
+  }
+  /*div with loading percentage*/
+  .header_load_percentage {
+       text-align: center; 
+       margin: 10px;
+       font-size: 23px;
+  }
+
+  /*loading footage, should be visible only on the 1st page*/
+  .header_loading{
+     position: fixed; 
+     left: 0; bottom: 0; 
+     width: 100%; 
+     padding: 10px; /* Поля вокруг текста */
+     background: #149B5F; /* bkgcolor временный*/
+  }
+
+  .intro{
+     height: 100vh;
+     background: url(../img/bg_image_corns.png) no-repeat right;
+     /*background: url(../img/svg/background_image.svg) no-repeat right;*/
+     /*background-color: #F7F7F7;*/
+     background-color: fffff;
+     background-size: contain; 
+     /*padding-top: 124px;*/
+  }
+/*start of login page style*/
+  .intro__title{
+     font-style: bold;
+     font-weight: 900;
+     font-size: 25px;
+     line-height: 42px;
+     color: #141414;
+     margin-bottom: 22px;
+  }
+  .intro__image{
+       display: block;
+       margin-left: -58px;
+       width: 412.45px;
+       height: 98.29px;
+       margin-bottom: 20px;
+  }
+  .intro__subtitle{
+     font-size: 14px;
+     line-height: 20px;
+     max-width: 445px;
+     margin-bottom: 10px;     
+  }
+  .intro__subtitle2{
+     font-size: 14px;
+     line-height: 20px;
+     max-width: 445px;
+     margin-bottom: 25px;
+  }
+  .intro__subtitle3{
+     font-weight: 900;
+     font-size: 12px;
+     line-height: 15px;
+     text-align: center;
+     letter-spacing: 0.2px;
+     color: #149B5F;
+  }
+/*end of left side of login page style*/
+.authosization{
+     display: flex;
+     flex-direction: row;
+     margin: 0 auto; 
+}
+.authosization__left{
+}
+.authorization__right{   
+     margin-top: 30px;
+     margin-left: 100px;
+}
+.auth__form-text{
+     font-size: 20px;
+     line-height: 24px;
+}
+.authosization__form{
+     height: 100%;
+     /*width: 100%;*/
+     margin: 0 auto;
+}
+/*для табов- сделать филл*/
+
+/*
+.container - all
+.tabs - links
+.content - form*/
+.auth_right-tabs{
+     width: auto;
+     height: 55px;
+     display: flex;
+     flex-direction: row;
+}
+.auth_right-tabs-content{
+     background-color: #F7F7F7;
+     width: 385px;
+     height: 410px;
+     padding: 40px 30px 80px 80px;
+     border: none;
+     cursor: pointer;
+}
+
+/* STYLING */
+.container {  
+     
+     margin: auto;
+     border: none;
+ }
+ 
+ /* Style the tabs */
+ .tabs {
+     height: 100%;
+     width: 358px;
+     overflow: hidden;
+     margin-bottom: -2px; /* hide bottom border*/
+ }
+  
+ .tabs ul {
+     list-style-type: none;
+     /*margin-left: 20px;*/
+ }
+ 
+ .tabs a{
+     float: left;
+     outline: none;
+     cursor: pointer;
+     padding: 12px 24px;
+     transition: background-color 0.2s;
+     background-color: #f1f1f1;
+     border-radius: 10px 10px 0px 0px;
+     font-weight: bold;
+     text-decoration: none;
+ }
+ .tabs a:last-child { 
+     /*border-right: 1px solid #ccc;*/
+     margin: auto;
+ }
+ 
+ /* Change background color of tabs on hover */
+ .tabs a:hover {
+     background-color: #FBFBFB;
+     text-decoration: none;
+ }
+ 
+ /* Styling for active tab */
+ .tabs a.active {
+     background-color: #F7F7F7;
+     text-decoration: none;
+     cursor: default;
+     color: black;
+     outline: none;
+ }
+ 
+ /* Style the tab content */
+ .tabcontent {
+     background-color: #F7F7F7;
+     width: 358px;
+     height: 410px;
+     padding: 30px;
+     box-shadow: 0px 36px 44px rgba(0, 0, 0, 0.1);
+     border-radius: 0px 0px 10px 10px;
+     vertical-align: center;  
+ }
+
+ .tab_text{
+      
+ }
+>>>>>>> origin/login-page-draft:css/style.css
