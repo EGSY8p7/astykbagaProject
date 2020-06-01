@@ -3,7 +3,11 @@ const User = require('../model/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const mailgun = require("mailgun-js");
+const dotenv = require('dotenv');
+dotenv.config();
 
+const Key = process.env.MG_KEY;
+const DOMAIN = process.env.DOMAIN;
 const mg = mailgun({apiKey: Key, domain: DOMAIN});
 
 //Validation registration
@@ -76,9 +80,9 @@ router.post('/login', async (req, res) => {
      //check is password is correct
      const validPassword = await bcrypt.compare(req.body.password, user.password);
      if(!validPassword){
-        return res.status(400).send( user.password);
+        return res.status(400).send( "Success");
     }
-    res.send('Success');
+    
 });
 
     //Forgot password
@@ -112,16 +116,50 @@ router.post('/login', async (req, res) => {
                     return res.send(error);
                 }
                 else{
-                    res.send(body);
+                    return res.send("Email sent");
                     
                 }
             });
         }
     })
 
+    
+
   
 
     });
+
+//Change password
+router.put('/resetPassword', async (req, res) => {
+const {token, password} = req.body;
+jwt.verify(token, process.env.RESET_PASSWORD_KEY, function(error, decodedData){
+if(error){
+    return res.send("Incorrect token or token expired");
+}
+else{
+    const user = User.findOne({ resetLink: token});
+    if( !user){
+        return res.status(400).send("User with this token does not exist"); 
+
+    }
+    else {
+        User.updateOne({password: password}, function(err, success) {
+            if(err){
+                return res.status(400).send("Reset Password error"); 
+            }
+            else {
+                return res.status(200).send("Password changed"); 
+            }
+        })
+    
+}
+}
+
+}) 
+
+});
+
+
 
 
 
