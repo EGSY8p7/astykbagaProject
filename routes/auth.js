@@ -10,6 +10,11 @@ const Key = process.env.MG_KEY;
 const DOMAIN = process.env.DOMAIN;
 const mg = mailgun({apiKey: Key, domain: DOMAIN});
 
+
+router.get('/',function(req,res) {
+    res.sendFile('..client/index.html');
+  });
+
 //Validation registration
 
 const Joi = require('@hapi/joi');
