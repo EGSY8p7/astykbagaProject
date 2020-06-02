@@ -18,6 +18,7 @@
   "homepage": "https://github.com/liacds/auth#readme",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -25,9 +26,12 @@
     "mailgun-js": "^0.22.0",
     "mongoose": "^5.9.16",
     "path": "^0.12.7",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-cookie": "^1.1.4",
+    "vuetify": "^2.2.30"
   },
   "devDependencies": {
+    "eslint": "^7.1.0",
     "nodemon": "^2.0.4"
   }
 }
