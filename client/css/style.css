@@ -132,9 +132,30 @@ input,select{vertical-align:middle}
 }
 .authosization__form{
      height: 100%;
-     /*width: 100%;*/
+     width: 100%;
      margin: 0 auto;
+     float: left;
+     overflow: hidden;
 }
+/*style for input div*/
+.auth__form-group{
+     padding: 10px 0 10px 0;
+}
+/*style for button+passforgot*/
+.auth__form-group-button{
+     display: flex;
+     flex-direction: row;
+     text-align: center;
+     margin: 30px auto;
+}
+/*забыли пароль style*/
+.auth__form-passforgot{
+     font-size: 13px;
+     line-height: 18px;
+     text-align: center;
+     color: #000000;
+}
+
 /*для табов- сделать филл*/
 
 /*
@@ -186,6 +207,7 @@ input,select{vertical-align:middle}
      border-radius: 10px 10px 0px 0px;
      font-weight: bold;
      text-decoration: none;
+     color: #000000;
  }
  .tabs a:last-child { 
      /*border-right: 1px solid #ccc;*/
@@ -203,7 +225,7 @@ input,select{vertical-align:middle}
      background-color: #F7F7F7;
      text-decoration: none;
      cursor: default;
-     color: black;
+     color: #149B5F;
      outline: none;
  }
  
@@ -217,6 +239,49 @@ input,select{vertical-align:middle}
      border-radius: 0px 0px 10px 10px;
      vertical-align: center;  
  }
+/*tab text for labels (tel,email) style*/
+.tabcontent-text{
+     color: #A9A9A9;
+     font-size: 12px;
+     line-height: 15px;
+}
+/*for inputs (email,pass etc) style*/
+.tabcontent-input{
+     border: none; 
+     outline: none;
+     border-bottom:solid #8A8A8A 1px;
+     width: 100%;
+     background-color: #F7F7F7;
+}
+/*for p-elements (auth/reg) style*/
+.tabcontent-p-text{
+     margin-bottom: 35px;
+     color: #000000;
+     font-size: larger;
+     font-weight: bold;
+}
+/*for buttons in form style*/
+.tabcontent-button{
+     margin-right: 15px;
+     background: #149B5F;
+     outline: none; border: none;
+     border-radius: 45px;
+     width: 130px;
+     height: 50px;
+     font-size: 12px;
+     line-height: 14px;
+     text-align: center;
+     color: #FFFFFF;
+}
+/*style for text at the end of form*/
+.tab_text{
+     text-align: justify;
+     font-size: 11px;
+     line-height: 18px;
+     letter-spacing: 0.1px;
+}
+
+
  .preloader{
      width:100%;
      height:100vh;

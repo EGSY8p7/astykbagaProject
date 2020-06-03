@@ -42,7 +42,7 @@
                         <a href="" class="intro__subtitle3">Узнать о Союзе</a>
                     </div>
                     <div class="authorization__right">
-                        <!--<div class="auth_right-tabs-content">-->
+                        <!--НАЧАЛО ФОРМЫ ВХОДА И РЕГИСТРАЦИИ-->
                         <div id="tabs" class="container">
                             <div class="tabs">
                                 <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">Войти в личный кабинет</a>
@@ -51,17 +51,17 @@
                             <div class="content">
                                 <div v-if="activetab === 1" class="tabcontent">
                                     <form action="" class="authorization__form" method="">
-                                        <p>Авторизация</p>
-                                        <label for="telType">Номер телефона</label>
+                                        <p class="tabcontent-p-text">Авторизация</p>
+                                        <label for="telType" class="tabcontent-text">Номер телефона</label>
                                         <div class="auth__form-group">                  
-                                            <input type="tel" class="" id="telType">
+                                            <input type="tel" class="tabcontent-input" id="telType">
                                         </div>
-                                        <label for="passwordType">Пароль</label>
+                                        <label for="passwordType" class="tabcontent-text">Пароль</label>
                                         <div class="auth__form-group">
-                                            <input type="password" class="" id="passwordType">
+                                            <input type="password" class="tabcontent-input" id="passwordType">
                                         </div>
-                                        <div class="auth__form-group">
-                                            <input type="submit" class="" value="Войти">
+                                        <div class="auth__form-group-button">
+                                            <input type="submit" class="tabcontent-button" value="Войти">
                                             <a href="" class="auth__form-passforgot">Забыли пароль?</a>
                                         </div>  
                                         <p class="tab_text">Дальнейший просмотр информации возможен только для зарегистрированных пользователей</p>                      
@@ -69,22 +69,22 @@
                                 </div>
                                 <div v-if="activetab === 2" class="tabcontent">
                                     <form action="" class="authorization__form" method="">
-                                        <p>Регистрация</p>
-                                        <label for="emailType">E-mail</label>
+                                        <p class="tabcontent-p-text">Регистрация</p>
+                                        <label for="emailType" class="tabcontent-text">E-mail</label>
                                         <div class="auth__form-group">                  
-                                            <input type="email" class="" id="emailType">
+                                            <input type="email" class="tabcontent-input" id="emailType">
                                         </div>
-                                        <label for="telType">Номер телефона</label>
+                                        <label for="telType" class="tabcontent-text">Номер телефона</label>
                                         <div class="auth__form-group">                  
-                                            <input type="tel" class="" id="telType">
+                                            <input type="tel" class="tabcontent-input" id="telType">
                                         </div>
-                                        <label for="passwordType">Пароль</label>
+                                        <label for="passwordType" class="tabcontent-text">Пароль</label>
                                         <div class="auth__form-group">
-                                            <input type="password" class="" id="passwordType">
+                                            <input type="password" class="tabcontent-input" id="passwordType">
                                         </div>
-                                        <label for="passwordTypeRepeat">Повторите пароль</label>
+                                        <label for="passwordTypeRepeat" class="tabcontent-text">Повторите пароль</label>
                                         <div class="auth__form-group">
-                                            <input type="password" class="" id="passwordTypeRepeat">
+                                            <input type="password" class="tabcontent-input" id="passwordTypeRepeat">
                                         </div>
                                         <div class="auth__form-group">
                                             <input type="submit" class="" value="Зарегистрироваться">
